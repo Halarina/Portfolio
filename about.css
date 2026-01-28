@@ -1,0 +1,582 @@
+body {
+  margin: 0;
+  color: #288388;
+  font-family: "Helios Antique", sans-serif;
+  padding: 40px;
+  position: relative;
+  /* width: 100vw;
+  height: 100vh; */
+  background-color: white; /* колір фону, якщо потрібен */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/logo_hd_1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.2; /* робимо картинку прозорою */
+  z-index: -1; /* позаду всього контенту */
+}
+
+a {
+  color: #bfac93;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 58px;
+}
+
+.title p {
+  margin: 0px 0px 12px 0px;
+}
+
+.controls a.primary {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #d15a53;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin-top: 22px;
+}
+
+.controls a.primary:hover {
+  background: #d15a53;
+}
+
+/* Beginning of grid */
+.section h3 {
+  margin: 16px 24px 16px 24px;
+  font-size: 21px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #d15a53;
+  background: linear-gradient(to right, #bfac9300, white, #bfac9300);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 26px;
+  background: transparent;
+  border-radius: 16px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.section {
+  background: #bfac93b8;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 16px 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+}
+
+p {
+  font-size: 18px;
+  text-align: justify;
+  padding: 6px 16px 16px 16px;
+  margin: 0px;
+  line-height: 1.6;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 26px;
+  border-radius: 12px;
+  background: #d15953;
+  margin: 6px 6px 0 0;
+  font-weight: 600;
+  color: white;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 28px;
+  padding: 16px 16px 8px 16px;
+}
+/* End of grid */
+
+#highlights {
+  background: none;
+  box-shadow: none;
+  transform: none;
+}
+
+#bullets {
+  display: flex;
+  flex-wrap: wrap; /* переносить текст на новий рядок */
+  gap: 18px;
+  justify-content: center;
+}
+
+.bullet-item {
+  color: #288388;
+  font-weight: bold;
+  border: 10px solid white;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 8px;
+  background: #bfac9369;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 16px;
+  line-height: 1.3;
+}
+
+.bullet-item:nth-child(1) {
+  background-color: #bfac93;
+  color: #d15953;
+}
+.bullet-item:nth-child(2) {
+  background-color: #288388;
+  color: #bfac93;
+}
+.bullet-item:nth-child(3) {
+  background-color: #d15953;
+  color: #bfac93;
+}
+.bullet-item:nth-child(4) {
+  background-color: #bfac93;
+  color: #288388;
+}
+.bullet-item:nth-child(5) {
+  background-color: #288388;
+  color: #bfac93;
+}
+.bullet-item:nth-child(6) {
+  background-color: #d15953;
+  color: #bfac93;
+}
+.bullet-item:nth-child(7) {
+  background-color: #bfac93;
+  color: #d15953;
+}
+
+#highlights .h3 {
+  align-items: center;
+}
+
+/* Beginning of contact-section*/
+.contact-section {
+  /* background: #288388; */
+  color: #288388;
+  text-align: center;
+  padding: 0px 20px;
+  /* min-height: 100vh; */
+  overflow: visible;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #d15a53;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-right: 0px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+label {
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  width: 628px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #bfac93;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  outline: none;
+  background-color: #bfac935f;
+  color: #288388;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+button {
+  display: block;
+  width: 160px;
+  margin: 20px auto 0;
+  padding: 12px;
+  /* background: transparent; */
+  color: #d15a53;
+  border: 2px solid #bfac93;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d15a53;
+  color: #bfac93;
+}
+
+.success-message {
+  display: none;
+  margin-top: 20px;
+  color: #288388;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Плавний скрол */
+html,
+body {
+  scroll-behavior: smooth;
+}
+/* End of contact-section*/
+
+/* Beginning of social-panel*/
+.social-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 70px;
+}
+
+.social-panel a {
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  width: 110px;
+  height: 24px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.social-panel a i {
+  margin-right: 10px;
+}
+
+.social-panel a:hover {
+  background-color: #fff;
+  color: #288388;
+  transform: translateX(-5px);
+}
+
+h3 {
+  font-size: 24px;
+  text-align: center;
+  margin: 50px 0px 30px 0px;
+  color: #bfac93;
+}
+
+.telegram {
+  background-color: #0088cc;
+  color: #fff;
+}
+
+.viber {
+  background-color: #59267c;
+  color: #fff;
+}
+
+.whatsapp {
+  background-color: #25d366;
+  color: #fff;
+}
+
+.linkedin {
+  background-color: #0077b5;
+  color: #fff;
+}
+/* End of social-panel*/
+
+/* button UP */
+
+.box.up {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background: #d15953ba;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}
+
+.box.up a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.box.up:hover {
+  background: #2883889d;
+}
+
+.back a {
+  color: #bfac93;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: inline-block;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+@media screen and (max-width: 1440px) {
+  body {
+    padding: 30px;
+  }
+
+  .title h1 {
+    font-size: 52px;
+  }
+
+  .grid {
+    gap: 22px;
+  }
+
+  .bullet-item {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .controls a.primary {
+    position: absolute;
+    top: 34px; /* відступ зверху */
+    right: 22px; /* відступ справа */
+    margin-top: 0; /* прибираємо попередній відступ */
+  }
+
+  .title h1 {
+    font-size: 46px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .section h3 {
+    margin: 12px;
+    font-size: 20px;
+  }
+
+  .bullet-item {
+    width: 115px;
+    height: 115px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .title h1 {
+    font-size: 38px;
+  }
+
+  .title p {
+    font-size: 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 12px 16px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .bullet-item {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+  }
+
+  .skills {
+    padding: 12px 0;
+  }
+
+  .social-panel {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  .title h1 {
+    font-size: 30px;
+  }
+
+  .controls a.primary {
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    margin-top: 0;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #d15a53;
+  }
+
+  .section {
+    padding: 10px 12px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .bullet-item {
+    width: 90px;
+    height: 90px;
+    font-size: 13px;
+  }
+
+  .social-panel {
+    display: flex;
+    gap: 10px;
+    height: auto;
+    flex-wrap: nowrap;
+    height: 40px;
+  }
+
+  .social-panel a {
+    width: 22%;
+    justify-content: center;
+    font-size: 14px;
+    width: 83px;
+    height: 20px;
+  }
+
+  button {
+    width: 140px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .box.up {
+    bottom: 68px;
+    right: 14px;
+  }
+
+  input,
+  textarea {
+    width: 94%;
+  }
+
+  h3 {
+    margin: 30px 0px 6px 0px;
+  }
+
+  .back a {
+    color: #bfac93;
+    position: fixed;
+    bottom: 56px;
+    left: 0px;
+    display: inline-block;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    display: inline-block;
+    width: 85px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 375px) {
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .back a {
+    color: #d15a53;
+  }
+}

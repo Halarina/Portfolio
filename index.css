@@ -1,0 +1,770 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #288388;
+  font-family: "Helios Antique", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(191, 172, 147);
+  height: auto;
+  box-sizing: border-box;
+  /* padding: 0px 50px 0px 50px; */
+}
+
+.left-img {
+  width: 25%;
+}
+
+.right-img {
+  width: 60%;
+}
+
+.vertical-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.vertical-menu a {
+  text-decoration: none;
+  color: #288388;
+  font-size: 25px;
+  padding: 1px 32px;
+  /* border-radius: 5px; */
+  transition: background 0.3s;
+}
+
+.vertical-menu a:hover {
+  background: linear-gradient(to right, #bfac93, #d15a53, #bfac93);
+}
+
+h2 {
+  color: #bfac93a9;
+}
+
+.gallery {
+  position: relative;
+  display: inline-block;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slogan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slogan h2 {
+  position: absolute;
+  font-size: 72px;
+  font-weight: bold;
+  padding: 8px 14px;
+  text-shadow: 17px 17px 11px rgba(0, 0, 0, 0.457);
+}
+
+.visuals h2 {
+  top: 20px;
+  left: 82px;
+}
+
+.emotion h2 {
+  top: 20px;
+  right: 82px;
+}
+
+.impact h2 {
+  bottom: 395px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.motion {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #bfac93;
+  padding: 20px 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 82px;
+  font-weight: bold;
+  color: #d15a53;
+  margin: -20px 0 -15px 0;
+}
+
+.word {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  margin: 0 8px;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.word:nth-child(1-2) {
+  animation-delay: 0s;
+}
+.word:nth-child(2) {
+  animation-delay: 0.8s;
+}
+.word:nth-child(3) {
+  animation-delay: 1.6s;
+}
+.word:nth-child(4) {
+  animation-delay: 2.4s;
+}
+
+/* Beginning of contact-section*/
+.contact-section {
+  background: #288388;
+  color: white;
+  text-align: center;
+  padding: 0px 20px;
+  /* min-height: 100vh; */
+  overflow: visible;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #d15a53;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+label {
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  width: 628px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #bfac93;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  outline: none;
+  background-color: #bfac935f;
+  color: white;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+button {
+  display: block;
+  width: 160px;
+  margin: 20px auto 0;
+  padding: 12px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #bfac93;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d15a53;
+  color: #bfac93;
+}
+
+.success-message {
+  display: none;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Плавний скрол */
+html,
+body {
+  scroll-behavior: smooth;
+}
+/* End of contact-section*/
+
+h3 {
+  font-size: 24px;
+  text-align: center;
+  color: #bfac93;
+  margin-top: 63px;
+}
+
+/* Beginning of social-panel*/
+.social-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 230px;
+}
+
+.social-panel a {
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  width: 110px;
+  height: 24px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.social-panel a i {
+  margin-right: 10px;
+}
+
+.social-panel a:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateX(-5px);
+}
+
+.telegram {
+  background-color: #0088cc;
+  color: #fff;
+}
+
+.viber {
+  background-color: #59267c;
+  color: #fff;
+}
+
+.whatsapp {
+  background-color: #25d366;
+  color: #fff;
+}
+
+.linkedin {
+  background-color: #0077b5;
+  color: #fff;
+}
+/* End of social-panel*/
+
+/* button UP */
+
+.box.up {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background: #d15953ba;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}
+
+.box.up a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.box.up:hover {
+  background: #2883889d;
+}
+
+/* @media screen and (max-width: 1920px) {
+  .impact h2 {
+    bottom: 395px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+} */
+
+@media screen and (max-width: 1440px) {
+  .left-img {
+    width: 26%;
+  }
+
+  .right-img {
+    width: 62%;
+  }
+
+  h1 {
+    font-size: 69px;
+  }
+
+  .vertical-menu a {
+    font-size: 20px;
+  }
+
+  .slogan h2 {
+    font-size: 58px;
+  }
+
+  .impact h2 {
+    bottom: 291px;
+  }
+
+  .contact-section h2 {
+    margin-top: 9px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding-right: 58px;
+  }
+
+  .left-img {
+    width: 27%;
+  }
+
+  .right-img {
+    width: 65%;
+  }
+
+  h1 {
+    font-size: 61px;
+  }
+
+  .vertical-menu {
+    gap: 10px;
+  }
+
+  .vertical-menu a {
+    font-size: 16px;
+  }
+
+  .slogan h2 {
+    font-size: 44px;
+  }
+
+  .visuals h2 {
+    top: 18px;
+    left: 52px;
+  }
+
+  .emotion h2 {
+    top: 18px;
+    right: 52px;
+  }
+
+  .impact h2 {
+    bottom: 213px;
+    left: 50%;
+  }
+
+  .contact-section h2 {
+    font-size: 30px;
+    margin-top: 27px;
+  }
+
+  .contact-section p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  form {
+    max-width: 534px;
+  }
+
+  input,
+  textarea {
+    width: 92%;
+    margin-bottom: 12px;
+  }
+
+  .form-row {
+    width: 519px;
+  }
+
+  h3 {
+    margin-top: 73px;
+  }
+
+  .box.up {
+    bottom: 18px;
+    background: #d15953ba;
+    right: 20px;
+  }
+
+  .box.up:hover {
+    background: #2883889d;
+  }
+
+  .social-panel {
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding-right: 74px;
+  }
+
+  .left-img {
+    width: 27%;
+  }
+
+  .right-img {
+    width: 65%;
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  .vertical-menu {
+    gap: 5px;
+  }
+
+  .vertical-menu a {
+    font-size: 16px;
+  }
+
+  .slogan h2 {
+    font-size: 40px;
+  }
+
+  .visuals h2 {
+    top: 0px;
+    left: 14px;
+  }
+
+  .emotion h2 {
+    top: 0px;
+    right: 14px;
+  }
+
+  .impact h2 {
+    bottom: 150px;
+    left: 50%;
+  }
+
+  .contact-section h2 {
+    font-size: 24px;
+    margin-top: 6px;
+  }
+
+  .contact-section p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  form {
+    max-width: 534px;
+  }
+
+  input,
+  textarea {
+    width: 92%;
+    margin-bottom: 12px;
+  }
+
+  .form-row {
+    width: 519px;
+  }
+
+  h3 {
+    margin-top: 73px;
+  }
+
+  .box.up {
+    bottom: 186px;
+    background: #2883889d;
+    right: 20px;
+  }
+
+  .box.up:hover {
+    background: #d15953ba;
+  }
+
+  .social-panel {
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding-right: 174px;
+  }
+
+  .left-img {
+    width: 49%;
+    margin-left: -40px;
+  }
+
+  .right-img {
+    width: 118%;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 118%;
+  }
+
+  .vertical-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+  }
+
+  .vertical-menu a {
+    font-size: 11px;
+    padding: 1px 17px;
+  }
+
+  .slogan h2 {
+    font-size: 40px;
+    text-shadow: 9px 9px 7px rgba(0, 0, 0, 0.457);
+  }
+
+  .visuals h2 {
+    top: 0px;
+    left: 14px;
+    font-size: 24px;
+  }
+
+  .emotion h2 {
+    top: 0px;
+    right: 14px;
+    font-size: 24px;
+  }
+
+  .impact h2 {
+    bottom: 93px;
+    left: 50%;
+    font-size: 24px;
+  }
+
+  .contact-section h2 {
+    font-size: 24px;
+    margin-top: 27px;
+  }
+
+  .contact-section p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  form {
+    max-width: 534px;
+  }
+
+  input,
+  textarea {
+    width: 92%;
+    margin-bottom: 12px;
+  }
+
+  .form-row {
+    width: 420px;
+  }
+
+  h3 {
+    margin-top: 73px;
+  }
+
+  .box.up {
+    display: none;
+  }
+
+  h3 {
+    font-size: 22px;
+    margin-top: 34px;
+  }
+
+  .social-panel a {
+    width: 73px;
+    height: 20px;
+  }
+
+  .social-panel {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    padding-right: 0px;
+  }
+
+  .left-img {
+    width: 28%;
+    margin-left: -30px;
+  }
+
+  .right-img {
+    width: 66%;
+  }
+
+  h1 {
+    font-size: 26px;
+    line-height: 116%;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    /* margin-left: 0px; */
+    /* margin: -4px 0px 0px -57px; */
+  }
+
+  .vertical-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+  }
+
+  .vertical-menu a {
+    font-size: 10px;
+    padding: 1px 17px;
+  }
+
+  .slogan {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 103%;
+  }
+
+  .slogan h2 {
+    font-size: 40px;
+    text-shadow: 9px 9px 7px rgba(0, 0, 0, 0.457);
+  }
+
+  .gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .visuals h2 {
+    top: 0px;
+    left: 0px;
+    font-size: 20px;
+  }
+
+  .emotion h2 {
+    top: 0px;
+    right: 0px;
+    font-size: 20px;
+  }
+
+  .impact h2 {
+    bottom: 86px;
+    left: 50%;
+    font-size: 20px;
+  }
+
+  .contact-section {
+    width: 93%;
+    padding: 0px;
+    margin: 20px;
+  }
+
+  .contact-section h2 {
+    font-size: 22px;
+    margin-top: 0px;
+  }
+
+  .contact-section p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  form {
+    max-width: 534px;
+  }
+
+  input,
+  textarea {
+    width: 88%;
+  }
+
+  .form-row {
+    width: 334px;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-top: 24px;
+  }
+
+  .box.up {
+    display: none;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-top: 34px;
+  }
+
+.social-panel {
+  display: flex;
+  flex-wrap: wrap; /* кнопки переходять на новий рядок */
+  justify-content: center; /* центрування по горизонталі */
+  gap: 8px; /* відстань між кнопками по горизонталі та вертикалі */
+  max-width: 246px;
+  margin: 0 auto;
+}
+
+.social-panel a {
+  flex: 0 0 48%; /* ширина кнопки приблизно половина контейнера */
+  text-decoration: none;
+}
+
+.social-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0; /* відстань всередині кнопки */
+  font-size: 16px;
+  border-radius: 12px;
+}
+}
